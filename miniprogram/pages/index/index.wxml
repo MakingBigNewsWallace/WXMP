@@ -1,0 +1,106 @@
+<!--index.wxml-->
+
+  
+  <!-- 姓名 -->
+  <view class="name container">
+    <text>那么，首先先告诉我你的名字</text>
+    <view class="info_in">
+      <input
+        placeholder="君の名は?"
+        maxlength='30'
+        bindconfirm='NameInputFinish'
+      ></input>
+      <text>\n</text>
+    </view>
+  </view>
+
+ <!-- 性别 -->
+<view class="gender container">
+  
+  <view class="info_in">
+    <text>性别呢？</text>
+    <radio-group>
+      <label>
+        <text>男♂</text>
+        <radio value="male"></radio>
+        <text>\n</text>
+      </label>
+      <label>
+        <text>女♀</text>
+        <radio value="female"></radio>
+        <text>\n</text>
+      </label>
+      <label>
+        <text> ???</text>
+        <radio value="?"></radio>
+        <text>\t\t（秀吉也没关系</text>
+      </label>
+    </radio-group>
+  </view>  
+</view>
+<text>\n</text>
+
+<!-- 意愿部门 -->
+ 
+<view class="section">
+    <view class="section__title">那你最喜欢去哪个部门呢？
+    </view>
+    <text>(当然是王道征途，泡泡系啦\n\n</text>
+
+    <view class="applyment">
+
+      <view class="FIRST apply">
+          <picker id="AppDep1" range='{{deps}}' value="{{DepChoice1}}" bindchange="applyment">
+              <view class="selector">
+                第一志愿：{{deps[DepChoice1]}}
+                </view>
+          </picker>
+      </view>
+    </view>
+
+    <view class="applyment">
+      <view class="SECOND apply">
+      
+            <picker id="AppDep2" range='{{deps}}' value="{{DepChoice2}}" bindchange="applyment">
+              <view class="selector">
+              第二志愿：{{deps[DepChoice2]}}
+              </view>
+          </picker>
+        </view>
+    </view>  
+
+    <view class="applyment">
+      <view class="THIRD apply">
+    
+          <picker id="AppDep3" range='{{deps}}' value="{{DepChoice3}}" bindchange="applyment">
+              <view class="selector">
+                第三志愿：{{deps[DepChoice3]}}
+              </view>
+          </picker>
+      </view>
+    </view>  
+    <text>\n</text>
+    <view class="adapt">
+      是否服从调♂剂？
+        <radio-group>
+          <label>
+            <text>oh,yes sir!</text>
+            <radio value="yes"></radio>
+            <text>\n</text>
+          </label>
+          <label>
+            <text>noooooooo!</text>
+            <radio value="no"></radio>
+            <text>\n</text>
+          </label>
+        </radio-group>
+    </view>
+</view>
+
+
+
+
+
+ 
+
+
